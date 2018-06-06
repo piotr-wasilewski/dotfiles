@@ -65,6 +65,10 @@ plugins=(
   python
   sudo
   yarn
+  z
+  colorize
+  dircycle
+  extract
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -104,8 +108,6 @@ fpath=($fpath "~/dotfiles/zsh/themes/spaceship-prompt")
 autoload -U promptinit; promptinit
 prompt spaceship
 
-# importing "z" command https://raw.githubusercontent.com/rupa/z/master/z.sh
-. ~/z.sh
 
 source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/history.zsh
 source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/key-bindings.zsh
