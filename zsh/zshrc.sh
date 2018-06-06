@@ -61,6 +61,10 @@ ZSH_THEME="spaceship"
 plugins=(
   git
   httpie
+  npm
+  python
+  sudo
+  yarn
 )
 
 source $ZSH/oh-my-zsh.sh
