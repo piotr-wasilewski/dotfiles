@@ -51,7 +51,7 @@ check_default_shell() {
 }
 
 echo "We're going to do the following:"
-echo "1. Check to make sure you have zsh, vim, and tmux installed"
+echo "1. Check to make sure you have zsh, vim installed"
 echo "2. We'll help you install them if you don't"
 echo "3. We're going to check to see if your default shell is zsh"
 echo "4. We'll try to change it if it's not" 
@@ -74,7 +74,12 @@ echo
 check_for_software vim
 echo
 
+
 check_default_shell
+
+echo "Spaceship-promt is set as a default theme"
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "~/dotfiles/zsh/themes/spaceship-prompt/spaceship.zsh-theme"
+
 
 echo
 echo -n "Would you like to backup your current dotfiles? (y/n) "
@@ -91,7 +96,6 @@ fi
 
 printf "source '$HOME/dotfiles/zsh/zshrc_manager.sh'" > ~/.zshrc
 printf "so $HOME/dotfiles/vim/vimrc.vim" > ~/.vimrc
-printf "source-file $HOME/dotfiles/tmux/tmux.conf" > ~/.tmux.conf
 
 echo
 echo "Please log out and log back in for default shell to be initialized."
