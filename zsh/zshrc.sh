@@ -118,6 +118,7 @@ source ~/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source ~/dotfiles/zsh/keybindings.sh
 source ~/dotfiles/zsh/aliases.sh
 source ~/dotfiles/zsh/functions.sh
+source ~/dotfiles/zsh/gvar.sh
 source ~/dotfiles/zsh/plugins/pipenv.zsh
 
 # export MANPATH="/usr/local/man:$MANPATH"

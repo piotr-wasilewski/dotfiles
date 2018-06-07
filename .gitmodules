@@ -10,3 +10,6 @@
 [submodule "zsh/themes/spaceship-prompt"]
 	path = zsh/themes/spaceship-prompt
 	url = git@github.com:denysdovhan/spaceship-prompt.git
+[submodule "zsh/plugins/gvar"]
+	path = zsh/plugins/gvar
+	url = git@github.com:piotr-wasilewski/gvar.git
