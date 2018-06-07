@@ -69,6 +69,7 @@ plugins=(
   colorize
   dircycle
   extract
+  colored-man-pages
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -117,6 +118,7 @@ source ~/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source ~/dotfiles/zsh/keybindings.sh
 source ~/dotfiles/zsh/aliases.sh
 source ~/dotfiles/zsh/functions.sh
+source ~/dotfiles/zsh/plugins/pipenv.zsh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 export XDEBUG_CONFIG="idekey=VSCODE"
