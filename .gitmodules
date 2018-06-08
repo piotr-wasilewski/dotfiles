@@ -13,3 +13,6 @@
 [submodule "zsh/plugins/gvar"]
 	path = zsh/plugins/gvar
 	url = git@github.com:piotr-wasilewski/gvar.git
+[submodule "zsh/plugins/pipenv"]
+	path = zsh/plugins/pipenv
+	url = git@github.com:piotr-wasilewski/zsh-pipenv.git
