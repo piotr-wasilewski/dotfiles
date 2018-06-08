@@ -86,17 +86,3 @@
 	nnoremap <leader>t :tabnew<CR>:Ex<CR>
 	nnoremap <leader>v :vsplit<CR>:w<CR>:Ex<CR>
 	nnoremap <leader>s :split<CR>:w<CR>:Ex<CR>
-
-" Return to the same line you left off at
-	augroup line_return
-		au!
-		au BufReadPost *
-			\ if line("'\"") > 0 && line("'\"") <= line("$") |
-			\	execute 'normal! g`"zvzz' |
-			\ endif
-	augroup END
-
-" Future stuff
-	"Swap line
-	"Insert blank below and above
-
