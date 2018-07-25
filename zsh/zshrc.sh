@@ -104,10 +104,10 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # https://github.com/denysdovhan/spaceship-prompt
-fpath=($fpath "~/dotfiles/zsh/themes/spaceship-prompt")
-# Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt spaceship
+# fpath=($fpath "~/dotfiles/zsh/themes/spaceship-prompt")
+# # Set Spaceship ZSH as a prompt
+# autoload -U promptinit; promptinit
+# prompt spaceship
 
 
 source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/history.zsh

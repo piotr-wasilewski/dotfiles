@@ -7,7 +7,7 @@ prompt_install() {
 	if echo "$answer" | grep -iq "^y" ;then
 		# This could def use community support
 		if [ -x "$(command -v apt-get)" ]; then
-			sudo apt-get install $1 -y
+			sudo apt install $1 -y
 
 		elif [ -x "$(command -v brew)" ]; then
 			brew install $1
@@ -74,11 +74,27 @@ echo
 check_for_software vim
 echo
 
+# VARS
+ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
+
+# init submodule
+git submodule init
+git submodule update
 
 check_default_shell
 
-echo "Spaceship-promt is set as a default theme"
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "~/dotfiles/zsh/themes/spaceship-prompt/spaceship.zsh-theme"
+# instaling oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+
+echo "Set Spaceship-promt as a default theme"
+sudo apt-get install fonts-powerline
+ln -s "$HOME/dotfiles/zsh/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+echo 
+echo "Adding script virtualhost to manage apache2 vhosts"
+sudo ln -s "$HOME/dotfiles/zsh/plugins/virtualhost" "/usr/local/bin/virtualhost"
+chmod +x "$HOME/dotfiles/zsh/plugins/virtualhost"
 
 
 echo
