@@ -106,11 +106,13 @@ stty $old_stty_cfg
 if echo "$answer" | grep -iq "^y" ;then
 	mv ~/.zshrc ~/.zshrc.old
 	mv ~/.vimrc ~/.vimrc.old
+	mv ~/.tmux.conf ~/.tmux.conf.old
 else
 	echo -e "\nNot backing up old dotfiles."
 fi
 
 printf "source '$HOME/dotfiles/zsh/zshrc_manager.sh'" > ~/.zshrc
+printf "source '$HOME/dotfiles/tmux/tmux.conf'" > ~/.tmux.conf
 printf "so $HOME/dotfiles/vim/vimrc.vim" > ~/.vimrc
 
 echo
